@@ -3,8 +3,11 @@ module.exports = {
   content: ["./src/**/*.{html,js}"],
   theme: {
     extend: {
-      backgroundColor: theme =>({
-        'brand-color': '#5d3ebc'
+      colors: theme =>({
+        'brand-color': '#5d3ebc',
+        'primary-brand-color': '#5d3ebc',
+        'secondary-brand-color': '#7849f7' ,
+        'brand-yellow': '#ffd300'
       })
     },
   },
