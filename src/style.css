@@ -408,6 +408,11 @@ video {
   height: auto;
 }
 
+html, body{
+  font-family: 'Open Sans', sans-serif
+        @apply antialiased
+}
+
 *, ::before, ::after {
   --tw-border-spacing-x: 0;
   --tw-border-spacing-y: 0;
@@ -596,6 +601,14 @@ video {
   height: 2.75rem;
 }
 
+.h-\[500px\] {
+  height: 500px;
+}
+
+.w-full {
+  width: 100%;
+}
+
 .items-center {
   align-items: center;
 }
@@ -609,9 +622,18 @@ video {
           column-gap: 2rem;
 }
 
+.gap-x-2 {
+  -webkit-column-gap: 0.5rem;
+          column-gap: 0.5rem;
+}
+
 .bg-brand-color {
   --tw-bg-opacity: 1;
   background-color: rgb(93 62 188 / var(--tw-bg-opacity));
+}
+
+.object-cover {
+  object-fit: cover;
 }
 
 .text-sm {
