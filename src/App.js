@@ -19,7 +19,6 @@ function App() {
         <Favorites />
           <MobileApp />
           <Cards />
-         
         </div>
         <Footer />
       </>
