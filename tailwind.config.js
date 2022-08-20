@@ -10,9 +10,9 @@ module.exports = {
         '0.1': '0.063rem'
       },
       colors: theme =>({
-        'brand-color': '#5d3ebc',
+        'brand-color': '#271673',
         'primary-brand-color': '#5d3ebc',
-        'secondary-brand-color': '#7849f7' ,
+        'secondary-brand-color': '#7849f7',
         'brand-yellow': '#ffd300'
       })
     },

@@ -1,3 +1,7 @@
+import Menu from "./ui/Menu"
+import { FaFacebook, FaTwitter, FaInstagram } from "react-icons/fa"
+import { BiGlobe } from 'react-icons/bi'
+ 
 export default function Footer(){
     
     const menus = [
@@ -18,7 +22,7 @@ export default function Footer(){
                 },
                 {
                 title: "Sosyal Sorumluluk Projeleri",
-                },
+                }
             ]
         },
         {
@@ -38,7 +42,24 @@ export default function Footer(){
                 },
                 {
                 title: "Çerez Politikası",
+                }
+            ]
+        },
+        {
+            title: "İş Ortağımız Olun",
+            items: [
+                {
+                title: "Bayimiz Olun",
                 },
+                {
+                title: "Deponuzu Kiralayın",
+                },
+                {
+                title: "GetirYemek Restoranı Olun",
+                },
+                {
+                title: "Getir Çarşı İşletmesi Olun",
+                }
             ]
         }
 
@@ -48,12 +69,40 @@ export default function Footer(){
         <div className="bg-white mt-10">
             <div className="container mx-auto">
                 <div className="grid  grid-cols-4 pt-10">
-                    <nav className="grid gap-y-4">
-                        <h6 className="text-lg text-primary-brand-color">Getir'i İndirin!</h6>
-                        <a href="#" className="transition-all transform hover:scale-105"><img src="https://getir.com/_next/static/images/appstore-tr-141ed939fceebdcee96af608fa293b31.svg" alt="" /></a>
-                        <a href="#" className="transition-all transform hover:scale-105"><img src="https://getir.com/_next/static/images/googleplay-tr-6b0c941b7d1a65d781fb4b644498be75.svg" alt="" /></a>
-                        <a href="#" className="transition-all transform hover:scale-105"><img src="https://getir.com/_next/static/images/huawei-appgallery-tr-4b890fa3167bc62f9069edaf45aa7f30.svg" alt="" /></a>
-                    </nav> 
+                    <section>
+                        <nav className="grid gap-y-4">
+                            <h6 className="text-lg text-primary-brand-color">Getir'i İndirin!</h6>
+                            <a href="#" className="transition-all transform hover:scale-105"><img src="https://getir.com/_next/static/images/appstore-tr-141ed939fceebdcee96af608fa293b31.svg" alt="" /></a>
+                            <a href="#" className="transition-all transform hover:scale-105"><img src="https://getir.com/_next/static/images/googleplay-tr-6b0c941b7d1a65d781fb4b644498be75.svg" alt="" /></a>
+                            <a href="#" className="transition-all transform hover:scale-105"><img src="https://getir.com/_next/static/images/huawei-appgallery-tr-4b890fa3167bc62f9069edaf45aa7f30.svg" alt="" /></a>
+                        </nav> 
+                    </section>
+                    {menus.map((menu, index) =>
+                        <Menu key={index} {...menu} />
+                    )}
+                </div>
+                <div className="flex justify-between items-center border-t border-gray-100 mt-6 py-6">
+                    <div className="text-[13px] text-gray-700 flex gap-x-8">
+                        &copy; 2022 Getir 
+                        <div className="-mx-5">&bull;</div>
+                        <a href="#" className="text-primary-brand-color hover:underline text-[13px]">
+                           Bilgi Toplumu Hizmetleri
+                        </a>
+                    </div>
+                    <nav className="flex gap-x-3">
+                        <a href="#" className="w-8 h-8 rounded-lg text-gray-500 transition-colors hover:bg-primary-brand-color hover:text-primary-brand-color hover:bg-opacity-10 flex items-center justify-center">
+                            <FaFacebook size={21}/>
+                        </a>
+                        <a href="#" className="w-8 h-8 rounded-lg text-gray-500 transition-colors hover:bg-primary-brand-color hover:text-primary-brand-color hover:bg-opacity-10 flex items-center justify-center">
+                            <FaInstagram size={21}/>
+                        </a>
+                        <a href="#" className="w-8 h-8 rounded-lg text-gray-500 transition-colors hover:bg-primary-brand-color hover:text-primary-brand-color hover:bg-opacity-10 flex items-center justify-center">
+                            <FaTwitter size={21}/>
+                        </a>
+                        <a href="#" className="h-8 px-2 transition-colors hover:bg-primary-brand-color hover:bg-opacity-20 flex items-center border border-gray-100 text-sm gap-x-2 rounded text-gray-500 hover:text-primary-brand-color">
+                            <BiGlobe size={21}/>Türkçe (TR)
+                        </a>
+                    </nav>
                 </div>
             </div>
         </div>
