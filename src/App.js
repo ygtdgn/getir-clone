@@ -15,10 +15,13 @@ function App() {
           <HeroSection />
           <Categories />
           <Campaigns />
-          <Favorites />
+        <div className="container mx-auto grid gap-y-6">
+        <Favorites />
           <MobileApp />
           <Cards />
-          <Footer />
+         
+        </div>
+        <Footer />
       </>
   );
 }
