@@ -60,7 +60,11 @@ export default function HeroSection(){
               className="flag-select"
             />
             <label className="flex-1 relative block group cursor-pointer">
-              <input required className="h-14 px-4 border-2 border-gray-200 rounded w-full transition-colors group-hover:border-primary-brand-color outline-none focus:border-primary-brand-color peer text-sm pt-2 cursor-pointer" />
+              <input  onKeyPress={(event) => {
+        if (!/[0-9]/.test(event.key)) {
+          event.preventDefault();
+        }
+      }} required className="h-14 px-4 border-2 border-gray-200 rounded w-full transition-colors group-hover:border-primary-brand-color outline-none focus:border-primary-brand-color peer text-sm pt-2 cursor-pointer" />
               <span className="absolute top-0 left-0 h-full px-4 -mt-[2px] flex items-center text-sm text-gray-500 peer-focus:h-7 transition-all peer-focus:text-primary-brand-color peer-focus:text-xs peer-valid:h-7 peer-valid:text-primary-brand-color peer-valid:text-xs">Telefon Numarasi</span>
             </label>
           </div>
